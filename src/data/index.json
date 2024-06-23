@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "src": "./img/react.png",
+      "title": "React.Js",
+      "description": "Proficient in leveraging the React.js library to build responsive, high-performance web applications with a focus on component-based architecture and efficient state management."
+    },
+    {
+      "id": "2",
+      "src": "./img/js.png",
+      "title": "JavaScript",
+      "description": "Skilled in JavaScript for creating dynamic, interactive web features and enhancing user experiences through efficient and clean code."
+    },
+    {
+      "id": "3",
+      "src": "./img/html.png",
+      "title": "HTML",
+      "description": "Experienced in crafting semantic and well-structured HTML to ensure accessibility, SEO optimization, and a solid foundation for web applications."
+    },
+    {
+      "id": "4",
+      "src": "./img/css.png",
+      "title": "CSS",
+      "description": "Proficient in CSS with a knack for crafting visually stunning and seamlessly responsive web designs."
+    }
+  ]
+}
