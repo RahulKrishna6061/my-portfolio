@@ -20,7 +20,8 @@ export default function HeroSection() {
             {/* <br /> Dolorum, quas. Amet soluta assumenda cum? */}
           </p>
 
-          <a href="./img/resume.pdf" download="Resume">
+          {/* <a href="./img/resume.pdf" download="Resume"> */}
+          <a href="https://drive.google.com/drive/folders/1MEqItw_nEuDKUa-_dx2ZSLUbHmtufN-z" download="Resume">
             <button className="btn btn-primary download">
               Download Resume
             </button>
