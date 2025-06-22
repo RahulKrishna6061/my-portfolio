@@ -455,7 +455,7 @@ h2 {
 }
 
 .project--card {
-  background-color: var(--dark);
+  background-color: #0d0d12 ;
   border-radius: 12px;
   padding: 1.5rem;
   width: 15rem;
@@ -532,7 +532,7 @@ color: var(--heading-color);
   width: 100%;
 
   select {
-    background: #0d0d12 !important;
+    background: #0d0d12 ;
     color: #757568;
     border: 1.333px solid var(--primary);
   }
