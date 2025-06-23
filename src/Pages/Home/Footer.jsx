@@ -55,7 +55,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://www.linkedin.com/in/rahul-krishna-7297bb148/",
+    href: "https://www.linkedin.com/in/rahul-krishna-p/",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,77 +75,35 @@ const socialLinks = [
   },
 ];
 
+const footerLinks = [
+  { to: "heroSection", label: "Home" },
+  { to: "AboutMe", label: "About Me" },
+  { to: "mySkills", label: "Skills" },
+  { to: "myProjects", label: "Projects" },
+  { to: "Contact", label: "Contact" },
+];
+
 function Footer() {
   return (
     <footer className="footer--container">
       <div className="footer--link--container">
         <div className="footer--items">
           <ul>
-            <li>
-              <Link
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="heroSection"
-                className="text-md"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="AboutMe"
-                className="text-md"
-              >
-                About Me
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="mySkills"
-                className="text-md"
-              >
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="myProjects"
-                className="text-md"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="Contact"
-                className="text-md"
-              >
-                Contact
-              </Link>
-            </li>
+            {footerLinks.map(({ to, label }) => (
+              <li key={to}>
+                <Link
+                  activeClass="navbar--active-content"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to={to}
+                  className="text-md"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="footer--social--icon">
