@@ -94,6 +94,20 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={500}
+              to="myProjects"
+              className="navbar--content"
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={closeMenu}
+              activeClass="navbar--active-content"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
               to="Contact"
               className="navbar--content"
             >

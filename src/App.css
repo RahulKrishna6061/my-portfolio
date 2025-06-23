@@ -21,14 +21,14 @@ p {
   margin: 0;
 }
 :root {
-  --primary:rgb(127, 207, 223);
-  --heading-color: #3BBA9C;
+  --primary: rgb(127, 207, 223);
+  --heading-color: #3bba9c;
   --bg-shade: #1e1e2f;
   --peach: #ff4081;
   --lightpurple: #c7c9f7;
   --light: #f0f0f0;
-  --dark: #2E3047;
-  --bg-card: #3C3F58
+  --dark: #2e3047;
+  --bg-card: #3c3f58;
 }
 
 /*#3BBA9C
@@ -172,8 +172,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 15px 85.333px;
-  background: var(--dark);
-  box-shadow: 0px 5.333px 80px 0 rgba(0, 0, 0, 0.1);
+  background: #0d0d12;
   position: fixed;
   top: 0;
   left: 0;
@@ -419,7 +418,6 @@ h2 {
 .project--title--wrapper {
   text-align: left;
   margin-bottom: 3rem;
-  
 }
 
 .project--section--container {
@@ -451,11 +449,11 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
   justify-items: center;
-      align-items: center ;
+  align-items: center;
 }
 
 .project--card {
-  background-color: #0d0d12 ;
+  background-color: #0d0d12;
   border-radius: 12px;
   padding: 1.5rem;
   width: 15rem;
@@ -520,7 +518,7 @@ h2 {
   row-gap: 32px;
 }
 .contact--title {
-color: var(--heading-color);
+  color: var(--heading-color);
   font-family: "Josefin Sans";
 }
 .contact--label {
@@ -532,7 +530,7 @@ color: var(--heading-color);
   width: 100%;
 
   select {
-    background: #0d0d12 ;
+    background: #0d0d12;
     color: #757568;
     border: 1.333px solid var(--primary);
   }
@@ -545,7 +543,7 @@ color: var(--heading-color);
   align-self: stretch;
   border-radius: 8px;
   border: 1.333px solid var(--primary);
-  background: #0d0d12 !important
+  background: #0d0d12 !important;
 }
 select {
   -webkit-appearance: none;
@@ -685,7 +683,7 @@ input[type="checkbox"] {
   }
 
   .project--card--wrapper {
-   align-items: center;
+    align-items: center;
   }
 }
 
@@ -735,7 +733,7 @@ input[type="checkbox"] {
     font-size: 1.4rem;
   }
   .project--card--wrapper {
-   align-items: center;
+    align-items: center;
   }
 }
 
@@ -848,8 +846,8 @@ input[type="checkbox"] {
     font-size: 2.8rem;
   }
 
-  .project--title--wrapper{
-align-items: center;
+  .project--title--wrapper {
+    align-items: center;
   }
   .project--section--container {
     flex-direction: column;
