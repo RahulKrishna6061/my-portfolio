@@ -33,6 +33,14 @@ p {
   --bg-card: linear-gradient(145deg, #1e2126, #23262b);
   --bg-card2: linear-gradient(145deg, #262932, #2d3140);
   --bg-card3: linear-gradient(145deg, #181a1f, #20222a);
+  --card-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
+    6px 6px 12px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
+    inset 6px 6px 12px rgba(0, 0, 0, 0.35);
+  --btn-shadow: -6px -6px 16px rgba(255, 255, 255, 0.1),
+    6px 6px 12px rgba(0, 0, 0, 0.6);
+  --btn-shadow-hover: inset -6px -6px 16px rgba(255, 255, 255, 0.035),
+    inset 6px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .btn-primary {
@@ -42,19 +50,19 @@ p {
   background: var(--bg-card);
   border: none;
   transition: 0.3s ease-in-out;
-  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.1),
-    6px 6px 12px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--btn-shadow);
   color: var(--bright-pink);
   cursor: pointer;
 }
 .btn-primary:hover {
   background: var(--bg-card3);
+  box-shadow: var(--btn-shadow-hover);
 }
 
-.btn-primary:active {
+/* .btn-primary:active {
   box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.035),
     inset 6px 6px 12px rgba(0, 0, 0, 0.5);
-}
+} */
 /* Global CSS Ends */
 /* Main Headings */
 
@@ -262,14 +270,14 @@ h3 {
   background: var(--bg-card);
   border: none;
   transition: 0.3s ease-in-out;
-  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.1),
-    6px 6px 12px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--btn-shadow);
   color: var(--bright-pink);
   cursor: pointer;
 }
 
 .hero--social--icon button:hover {
   background: var(--bg-card3);
+  box-shadow: var(--btn-shadow-hover);
 }
 
 .hero--section--img {
@@ -357,15 +365,13 @@ h3 {
   min-height: 250px;
   background: var(--bg-card);
   transition: 0.3s ease-in-out;
-  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
-    6px 6px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--card-shadow);
 }
 
 .skills--section--card:hover {
   transform: scale(1.05);
   background: var(--bg-card3);
-  box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
-    inset 6px 6px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--card-shadow-hover);
 }
 .skills--section--card:hover .skills--section--description {
   /* color: var(--light-pink); */
@@ -456,8 +462,7 @@ h3 {
 
 .project--card {
   background: var(--bg-card);
-  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
-    6px 6px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--card-shadow);
   border-radius: 12px;
   padding: 1.5rem;
   width: 15rem;
@@ -472,12 +477,9 @@ h3 {
 }
 
 .project--card:hover {
-  /* color: var(--light-pink);*/
   background: var(--bg-card3);
-
   transform: scale(1.05);
-  box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
-    inset 6px 6px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .project--img--wrapper {
@@ -970,17 +972,11 @@ select::-ms-expand {
     width: 1.875rem;
     height: 1.313rem;
     padding: 0.5rem;
-    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
-      6px 6px 12px rgba(0, 0, 0, 0.4);
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
     top: 25px;
     right: 25px;
-  }
-  .nav__hamburger:hover {
-    box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
-      inset 6px 6px 12px rgba(0, 0, 0, 0.35);
   }
 
   .nav__hamburger__line {
