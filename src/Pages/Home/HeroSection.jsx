@@ -1,3 +1,5 @@
+import { socialLinks } from "../../data/data";
+
 export default function HeroSection() {
   return (
     <section id="heroSection" className="hero--section">
@@ -26,10 +28,27 @@ export default function HeroSection() {
             href="https://drive.google.com/drive/folders/1MEqItw_nEuDKUa-_dx2ZSLUbHmtufN-z"
             download="Resume"
           >
-            <button className="btn-primary">
-              Download Resume
-            </button>
+            <button className="btn-primary">Download Resume</button>
           </a>
+          <div className="hero--social--container">
+            <div className="hero--social--icon">
+              <ul>
+                {socialLinks.map(({ href, svg }, idx) => (
+                  <li key={href}>
+                    <button
+                      aria-label="Social Link"
+                      className="navbar--content"
+                      onClick={() =>
+                        window.open(href, "_blank", "noopener,noreferrer")
+                      }
+                    >
+                      {svg}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div className="hero--section--img">

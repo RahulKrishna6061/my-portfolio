@@ -1,16 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { navLinks } from "../../data/data";
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
-
-  const navLinks = [
-    { to: "heroSection", label: "Home" },
-    { to: "AboutMe", label: "About Me" },
-    { to: "mySkills", label: "Skills" },
-    { to: "myProjects", label: "Projects" },
-    { to: "Contact", label: "Contact" },
-  ];
 
   const toggleNav = () => {
     setNavActive(!navActive);
@@ -50,7 +43,7 @@ function Navbar() {
         <span className="nav__hamburger__line"></span>
         <span className="nav__hamburger__line"></span>
       </a>
-      <div className={`navbar--items ${navActive ? "active" : ""}`}>
+      <div className={`navbar--items ${navActive ? "active" : "inactive"}`}>
         <ul>
           {navLinks.map(({ to, label }) => (
             <li key={to}>

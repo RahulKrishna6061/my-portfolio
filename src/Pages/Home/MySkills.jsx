@@ -1,14 +1,13 @@
-import data from "../../data/index.json";
+import { skills } from "../../data/data";
 
 export default function MySkills() {
   return (
     <section className="skills--section" id="mySkills">
       <div className="portfolio--container">
-        {/* <p className="section--title">My Skills</p> */}
         <h1 className="skills--section--title">My Expertise</h1>
       </div>
       <div className="skills--section--container">
-        {data?.skills?.map((item, index) => (
+        {skills?.map((item, index) => (
           <div key={index} className="skills--section--card">
             <div className="skills--section--img">
               <img src={item.src} alt="Product Chain" />
