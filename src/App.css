@@ -1,4 +1,6 @@
 /* Global CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 @font-face {
   font-family: Hero;
   src: url(./Hero-Regular.ttf);
@@ -6,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: Hero;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   background-color: #212429;
   color: #f0f0f0;
@@ -18,22 +20,20 @@ h4,
 h5,
 h6,
 p {
+  font-family: "Poppins", sans-serif;
   margin: 0;
 }
 :root {
   --primary: rgb(127, 207, 223);
-  --heading-color: #3bba9c;
   --bg-shade: #212429;
-  --peach: #ff4081;
-  --lightpurple: #c7c9f7;
+  --bright-pink: #ff0050;
+  --light-pink: #fdc6d1;
   --light: #f0f0f0;
+  --white: #ffffff;
   --dark: #2e3047;
-  --bg-card: #3c3f58;
-  --cards-bg: linear-gradient(145deg, #1e2126, #23262b);
+  --bg-card: linear-gradient(145deg, #1e2126, #23262b);
 }
 
-//#1E2126
-//#23262B
 .btn {
   font-family: "Josefin Sans";
   display: inline-block;
@@ -56,23 +56,13 @@ p {
   -ms-transition: background-color 0.5s, color 0.5s;
   -o-transition: background-color 0.5s, color 0.5s;
 }
-/* .btn-outline-primary {
-  color: var(--primary);
-  background-color: var(--dark);
-  border: 1px solid var(--primary);
-} */
-/* .btn-outline-primary:hover {
-  color: var(--dark);
-  background-color: var(--primary);
-} */
 
 .btn-primary {
   height: 3rem;
   border-radius: 0.7rem;
-  background-color: var(--cards-bg);
-  transition: 0.3s ease-in-out;
-  box-shadow:
-    -8px -8px 20px rgba(255, 255, 255, 0.05),
+  background-color: var(--bg-card);
+  /* transition: 0.3s ease-in-out; */
+  box-shadow: -8px -8px 20px rgba(255, 255, 255, 0.05),
     8px 8px 24px rgba(0, 0, 0, 0.35);
 }
 .btn-primary:hover {
@@ -100,19 +90,23 @@ p {
 
 /* Heading 1 */
 h1 {
+  font-family: "Poppins", sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 67px;
 }
 /* Heading 2 */
 h2 {
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 58px;
 }
 /* Heading 3 */
-h2 {
-  font-size: 24px;
+h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--bright-pink);
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 34px;
 }
@@ -120,7 +114,7 @@ h2 {
 /* Pragraphs text large medium small */
 /* Body 1 */
 .text-lg {
-  color: var(--lightpurple);
+  color: var(--light-pink);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -128,7 +122,7 @@ h2 {
 }
 /* Body 2 */
 .text-md {
-  color: var(--lightpurple);
+  color: var(--light-pink);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -136,7 +130,7 @@ h2 {
 }
 /* Body 3 */
 .text-sm {
-  color: var(--light);
+  color: var(--white);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -146,7 +140,7 @@ h2 {
 /* Section Titles */
 /* Skills & About Me */
 .section--title {
-  color: var(--heading-color);
+  color: var(--light);
   font-size: 21px;
   text-align: center;
   font-style: normal;
@@ -170,27 +164,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 15px 85.333px;
-  background: #0d0d12;
+  background-color: #212429;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 }
-/* .navbar img {
-  height: 3rem;
-  width: 3rem;
-}
-.logo-name {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #cd6aa2 !important;
-  .span-1 {
-    color: #cd6aa2;
-  }
-  .span-2 {
-    color: #6780be;
-  }
-} */
+
 .navbar--items > ul {
   list-style: none;
   display: flex;
@@ -203,7 +183,7 @@ h2 {
 }
 /* Navbar Content */
 .navbar--content {
-  color: var(--lightpurple);
+  color: var(--light-pink);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -224,19 +204,21 @@ h2 {
   justify-content: space-between;
   gap: 32px;
   border-radius: 30px;
-  background: var(--cards-bg);
+  background: var(--bg-card);
   box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
     6px 6px 12px rgba(0, 0, 0, 0.4);
 }
 .section--title {
   font-size: 2rem;
-  color: var(--heading-color);
+  color: var(--light);
   font-weight: 700;
   line-height: 30px;
   align-self: stretch;
 }
 .name {
+  color: var(--bright-pink);
 }
+
 .hero--section--content-box {
   display: flex;
   flex: 1;
@@ -255,8 +237,8 @@ h2 {
   margin-top: 1.5rem;
 }
 .hero--section--title {
-  color: var(--heading-color);
-  font-family: "Josefin Sans";
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
   font-size: 4rem;
   font-weight: 700;
   line-height: 70px;
@@ -266,7 +248,7 @@ h2 {
   color: var(--primary);
 }
 .hero--section-description {
-  color: var(--lightpurple);
+  color: var(--light);
   font-size: 24px;
   font-weight: 400;
   line-height: 36px;
@@ -305,10 +287,10 @@ h2 {
 .about-section--title {
   font-family: "Josefin Sans";
   align-self: stretch;
-  color: var(--heading-color);
+  color: var(--light);
 }
 .about--section-description {
-  color: var(--lightpurple);
+  color: var(--light-pink);
   font-size: 21.3px;
   font-weight: 400;
   line-height: 36px;
@@ -331,7 +313,7 @@ h2 {
   gap: 106.667px;
 }
 .skills--section--title {
-  color: var(--heading-color);
+  color: var(--light);
   font-size: 3rem;
   font-family: "Josefin Sans";
   font-weight: 700;
@@ -354,19 +336,20 @@ h2 {
   flex: 1 0 0;
   border-radius: 10.6px;
   min-height: 250px;
-  background: var(--cards-bg);
+  background: var(--bg-card);
   transition: 0.3s ease-in-out;
   box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
     6px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .skills--section--card:hover {
+  transform: scale(1.05);
   background-color: #222233;
   box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
     inset 6px 6px 12px rgba(0, 0, 0, 0.35);
 }
 .skills--section--card:hover .skills--section--description {
-  color: var(--lightpurple);
+  color: var(--light-pink);
 }
 .skills--section--img {
   /* background: #1a1a25 !important; */
@@ -386,7 +369,7 @@ h2 {
   align-self: stretch;
 }
 .skills--section--title {
-  color: var(--heading-color);
+  color: var(--);
   font-size: 54px;
   font-weight: 700;
   line-height: 45px;
@@ -409,7 +392,9 @@ h2 {
   background-color: var(--bg-shade);
   border-radius: 16px;
   padding: 5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: var(--bg-card);
+  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
+    6px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .project--title--wrapper {
@@ -425,7 +410,7 @@ h2 {
   padding: 2rem 0;
 }
 .project--section--title {
-  color: var(--heading-color);
+  color: var(--light);
   font-size: 3rem;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
@@ -436,7 +421,7 @@ h2 {
   flex: 1;
   width: 50%;
   font-size: 24px;
-  color: var(--lightpurple);
+  color: var(--light-pink);
 }
 .project--cards--wrapper {
   flex: 1;
@@ -450,7 +435,9 @@ h2 {
 }
 
 .project--card {
-  background-color: #0d0d12;
+  background: var(--bg-card);
+  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
+    6px 6px 12px rgba(0, 0, 0, 0.4);
   border-radius: 12px;
   padding: 1.5rem;
   width: 15rem;
@@ -465,8 +452,11 @@ h2 {
 }
 
 .project--card:hover {
+  color: var(--light-pink);
   transform: scale(1.05);
-  background-color: #33334d;
+  background-color: #222233;
+  box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
+    inset 6px 6px 12px rgba(0, 0, 0, 0.35);
 }
 
 .project--img--wrapper {
@@ -515,7 +505,7 @@ h2 {
   row-gap: 32px;
 }
 .contact--title {
-  color: var(--heading-color);
+  color: var(--light);
   font-family: "Josefin Sans";
 }
 .contact--label {
@@ -583,7 +573,7 @@ select::-ms-expand {
 input[type="checkbox"] {
   width: 21px;
   height: 21px;
-  border: 0.15em solid var(--heading-color);
+  border: 0.15em solid var(--light);
   border-radius: 0.15em;
   transform: translatey(-0.075em);
 }
@@ -949,11 +939,18 @@ input[type="checkbox"] {
     display: none;
     width: 1.875rem;
     height: 1.313rem;
+    padding: 0.5rem;
+    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
+      6px 6px 12px rgba(0, 0, 0, 0.4);
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
     top: 25px;
     right: 25px;
+  }
+  .nav__hamburger:hover {
+    box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
+      inset 6px 6px 12px rgba(0, 0, 0, 0.35);
   }
 
   .nav__hamburger__line {
@@ -981,7 +978,9 @@ input[type="checkbox"] {
     width: 100%;
     padding: 0.75rem;
   }
-
+  .project--container--card {
+    padding: 1rem !important ;
+  }
   .project--section--description {
     font-size: 0.9rem;
     line-height: 1.5;
@@ -1012,7 +1011,7 @@ input[type="checkbox"] {
   display: block;
   height: 0.188rem;
   width: 100%;
-  background-color: var(--primary);
+  background-color: var(--bright-pink);
   border-radius: 0.625rem;
   transition: all ease-in-out 0.2s;
 }
@@ -1022,9 +1021,22 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 1200px) {
+  .navbar {
+    background-color: #212429;
+    padding-bottm: 0.5rem;
+  }
   .nav__hamburger {
     display: flex;
     z-index: 200;
+    padding: 0.5rem;
+    background: var(--bg-card);
+    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.02),
+      6px 6px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+  }
+  .nav__hamburger:hover {
+    box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.02),
+      inset 6px 6px 12px rgba(0, 0, 0, 0.35);
   }
   .navbar--items {
     display: flex;
@@ -1034,7 +1046,6 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0d0d12;
     top: -20rem;
     left: 0;
     width: 100%;
@@ -1058,6 +1069,7 @@ input[type="checkbox"] {
   }
   .navbar--items.active {
     top: 30px;
+    background-color: #212429;
   }
   .nav__hamburger.active :nth-child(1) {
     transform: rotate(45deg) translate(0.45rem, 0.1875rem);

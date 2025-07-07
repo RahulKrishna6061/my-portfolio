@@ -4,8 +4,9 @@ export default function HeroSection() {
       <div className="hero--section--content--box">
         <div className="hero--section--content">
           <p className="hero--section--title">
-            Hi, <br />
-            <span className="name">I'm Rahul Krishna</span>
+            <span>
+              Hi, I'm <span className="name">Rahul Krishna</span>
+            </span>
           </p>
           <h1 className="hero--section--title">
             <span className="hero--section-title--color">
@@ -21,7 +22,10 @@ export default function HeroSection() {
           </p>
 
           {/* <a href="./img/resume.pdf" download="Resume"> */}
-          <a href="https://drive.google.com/drive/folders/1MEqItw_nEuDKUa-_dx2ZSLUbHmtufN-z" download="Resume">
+          <a
+            href="https://drive.google.com/drive/folders/1MEqItw_nEuDKUa-_dx2ZSLUbHmtufN-z"
+            download="Resume"
+          >
             <button className="btn btn-primary download">
               Download Resume
             </button>

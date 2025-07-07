@@ -38,7 +38,7 @@ export default function MyProjects() {
                 className="project--card"
               >
                 <div className="project--card--content">
-                  <h3 className="project--card--title">{project.title}</h3>
+                  <h3 className="project--card--title secondary--title">{project.title}</h3>
                 </div>
               </a>
             ))}
