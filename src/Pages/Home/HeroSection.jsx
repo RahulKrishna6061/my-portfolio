@@ -26,7 +26,7 @@ export default function HeroSection() {
             href="https://drive.google.com/drive/folders/1MEqItw_nEuDKUa-_dx2ZSLUbHmtufN-z"
             download="Resume"
           >
-            <button className="btn btn-primary download">
+            <button className="btn-primary">
               Download Resume
             </button>
           </a>
