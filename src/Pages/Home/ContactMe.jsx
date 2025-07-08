@@ -1,13 +1,50 @@
+import { useState } from "react";
+
 export default function ContactMe() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can add actual validation or API logic here
+    // Show notification
+    setSubmitted(true);
+    // Optionally clear the form or keep it filled
+    e.target.reset();
+    // Hide the notification after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+  };
+
   return (
     <section id="Contact" className="contact--section">
       <div>
         <p className="text-lg">Get In Touch</p>
         <h1 className="contact--title">Contact Me</h1>
         <p className="contact--description">
-        Please fill out the form with your name, email, subject, and message. If you prefer, you can also contact me directly via email or phone.        </p>
+          Please fill out the form with your name, email, subject, and message.
+          If you prefer, you can also contact me directly via email or phone.
+        </p>
       </div>
-      <form className="contact--form--container">
+
+      {/* ✅ Success Notification */}
+      {submitted && (
+        <div
+          style={{
+            backgroundColor: "#2e3047",
+            color: "#00c982",
+            padding: "1rem",
+            marginBottom: "1rem",
+            borderRadius: "0.5rem",
+            textAlign: "center",
+            fontWeight: "600",
+          }}
+        >
+          ✅ Your message has been sent successfully!
+        </div>
+      )}
+
+      <form className="contact--form--container" onSubmit={handleSubmit}>
         <div className="container">
           <label htmlFor="first-name" className="contact--label">
             <span className="text-md">First Name</span>
@@ -40,9 +77,9 @@ export default function ContactMe() {
             />
           </label>
           <label htmlFor="phone-number" className="contact--label">
-            <span className="text-md">phone-number</span>
+            <span className="text-md">Phone Number</span>
             <input
-              type="number"
+              type="tel"
               className="contact--input text-md"
               name="phone-number"
               id="phone-number"
@@ -50,13 +87,16 @@ export default function ContactMe() {
             />
           </label>
         </div>
-        <label htmlFor="choode-topic" className="contact--label">
+        <label htmlFor="choose-topic" className="contact--label">
           <span className="text-md">Choose a topic</span>
-          <select id="choose-topic" className="contact--input text-md">
-            <option>Select One...</option>
-            <option>Item 1</option>
-            <option>Item 2</option>
-            <option>Item 3</option>
+          <select id="choose-topic" className="contact--input text-md" required>
+            <option value="">Select One...</option>
+            <option value="collaboration">Collaboration Opportunity</option>
+            <option value="freelance">Freelance Project Inquiry</option>
+            <option value="feedback">Website Feedback</option>
+            <option value="job-opportunity">Job/Internship Opportunity</option>
+            <option value="bug-report">Bug Report</option>
+            <option value="general">General Inquiry</option>
           </select>
         </label>
         <label htmlFor="message" className="contact--label">
@@ -64,8 +104,10 @@ export default function ContactMe() {
           <textarea
             className="contact--input text-md"
             id="message"
+            name="message"
             rows="8"
             placeholder="Type your message..."
+            required
           />
         </label>
         <label htmlFor="checkbox" className="checkbox--label">
@@ -73,7 +115,9 @@ export default function ContactMe() {
           <span className="text-sm">I accept the terms</span>
         </label>
         <div>
-          <button className="btn btn-primary contact--form--btn">Submit</button>
+          <button type="submit" className="btn btn-primary contact--form--btn">
+            Submit
+          </button>
         </div>
       </form>
     </section>
