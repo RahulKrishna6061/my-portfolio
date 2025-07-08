@@ -832,7 +832,8 @@ select::-ms-expand {
     align-items: center;
   }
   .project--section--description,
-  .contact--description {
+  .contact--description,
+  .skills--section--description {
     width: 100%;
   }
   .contact--form--container {
@@ -898,7 +899,8 @@ select::-ms-expand {
   }
 
   .project--section--description,
-  .contact--description {
+  .contact--description,
+  .skills--section--description {
     max-width: 100%;
     font-size: 1.1rem;
   }
@@ -951,7 +953,8 @@ select::-ms-expand {
   }
 
   .project--section--description,
-  .contact--description {
+  .contact--description,
+  .skills--section--description {
     font-size: 1rem;
     padding: 0;
   }
@@ -984,7 +987,8 @@ select::-ms-expand {
   }
 
   .project--section--description,
-  .contact--description {
+  .contact--description,
+  .skills--section--description {
     font-size: 0.95rem;
   }
 
