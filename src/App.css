@@ -93,9 +93,9 @@ h3 {
 /* Body 1 */
 .text-lg {
   color: var(--light);
-  font-size: 18px;
+  font-size: 1.25rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 27px;
 }
 /* Body 2 */
@@ -445,17 +445,20 @@ h3 {
 }
 .project--section--description,
 .contact--description {
-  flex: 1;
-  width: 50%;
-  font-size: 24px;
   color: var(--light);
+  font-size: 21.3px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.project--section--description {
+  width: 50%;
 }
 .project--cards--wrapper {
-  flex: 1;
   width: 50%;
   display: flex;
-  flex-direction: column;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  flex-wrap: wrap;
+  /* flex-direction: column; */
   gap: 2rem;
   justify-items: center;
   align-items: center;
@@ -774,11 +777,13 @@ select::-ms-expand {
   .footer--content {
     text-align: center;
   }
-
+  .about--section--content {
+    align-items: center;
+  }
   .about-section--title,
   .skills--section--title {
-    justify-content: center; /* Ensure center alignment */
-    display: flex; /* Flexbox to center content */
+    justify-content: center;
+    display: flex;
   }
 
   .skills--section--container,
@@ -933,8 +938,11 @@ select::-ms-expand {
 
   .project--card {
     width: 80%;
+    height: 3rem;
   }
-
+  .project--card--container {
+    width: 50%;
+  }
   .project--section--title {
     font-size: 2rem;
   }
@@ -964,7 +972,11 @@ select::-ms-expand {
   }
 
   .project--card {
+    padding: 0.5rem;
     width: 90%;
+  }
+  .project--card--container {
+    width: 60%;
   }
   .project--card--title {
     font-size: 1rem;
@@ -982,6 +994,9 @@ select::-ms-expand {
   .hero--section--title span {
     font-size: 2rem;
   }
+  .project--card--container {
+    width: 70%;
+  }
   .project--section--title {
     font-size: 1.6rem;
   }
@@ -990,10 +1005,6 @@ select::-ms-expand {
   .contact--description,
   .skills--section--description {
     font-size: 0.95rem;
-  }
-
-  .project--card {
-    padding: 1rem;
   }
 }
 
@@ -1047,6 +1058,9 @@ select::-ms-expand {
 
   .project--cards--wrapper {
     gap: 1rem;
+  }
+  .project--card--container {
+    width: 80%;
   }
   .project--card--title {
     font-size: 0.95rem;

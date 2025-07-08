@@ -24,7 +24,7 @@ export default function MyProjects() {
 
           <div className="project--cards--wrapper">
             {projects.map((project, index) => (
-              <FadeIn key={index} delay={0.3 + index * 0.1}>
+              <FadeIn key={index} delay={0.3 + index * 0.1} className="project--card--container">
                 <a
                   href={project.url}
                   target="_blank"
