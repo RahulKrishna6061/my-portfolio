@@ -132,3 +132,18 @@ export const socialLinks = [
     ),
   },
 ];
+
+  export const projects = [
+    {
+      title: "Portfolio Website",
+      url: "https://rahulkrishna-portfolio.netlify.app/",
+    },
+    {
+      title: "Weather App",
+      url: "https://rkriz-weather-app.netlify.app/",
+    },
+    {
+      title: "Burger Delivery App",
+      url: "https://tasty-burgers-burger-delivery-app.netlify.app/",
+    },
+  ];
