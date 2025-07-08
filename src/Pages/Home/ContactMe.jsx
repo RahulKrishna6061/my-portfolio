@@ -1,18 +1,28 @@
 import { useState } from "react";
 
+// ✅ Modal component
+function SuccessModal({ onClose }) {
+  return (
+    <div className="modal-overlay">
+      <div className="modal">
+        <p className="modal-message">✅ Your message has been sent successfully!</p>
+      </div>
+    </div>
+  );
+}
+
 export default function ContactMe() {
-  const [submitted, setSubmitted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add actual validation or API logic here
-    // Show notification
-    setSubmitted(true);
-    // Optionally clear the form or keep it filled
+    // Show modal
+    setIsModalOpen(true);
+    // Reset form
     e.target.reset();
-    // Hide the notification after 3 seconds
+    // Auto close modal after 3 seconds
     setTimeout(() => {
-      setSubmitted(false);
+      setIsModalOpen(false);
     }, 3000);
   };
 
@@ -27,22 +37,8 @@ export default function ContactMe() {
         </p>
       </div>
 
-      {/* ✅ Success Notification */}
-      {submitted && (
-        <div
-          style={{
-            backgroundColor: "#2e3047",
-            color: "#00c982",
-            padding: "1rem",
-            marginBottom: "1rem",
-            borderRadius: "0.5rem",
-            textAlign: "center",
-            fontWeight: "600",
-          }}
-        >
-          ✅ Your message has been sent successfully!
-        </div>
-      )}
+      {/* ✅ Show Modal */}
+      {isModalOpen && <SuccessModal />}
 
       <form className="contact--form--container" onSubmit={handleSubmit}>
         <div className="container">
@@ -87,6 +83,7 @@ export default function ContactMe() {
             />
           </label>
         </div>
+
         <label htmlFor="choose-topic" className="contact--label">
           <span className="text-md">Choose a topic</span>
           <select id="choose-topic" className="contact--input text-md" required>
@@ -99,6 +96,7 @@ export default function ContactMe() {
             <option value="general">General Inquiry</option>
           </select>
         </label>
+
         <label htmlFor="message" className="contact--label">
           <span className="text-md">Message</span>
           <textarea
@@ -110,10 +108,12 @@ export default function ContactMe() {
             required
           />
         </label>
+
         <label htmlFor="checkbox" className="checkbox--label">
           <input type="checkbox" required name="checkbox" id="checkbox" />
           <span className="text-sm">I accept the terms</span>
         </label>
+
         <div>
           <button type="submit" className="btn btn-primary contact--form--btn">
             Submit
