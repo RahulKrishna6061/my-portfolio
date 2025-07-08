@@ -1044,12 +1044,8 @@ select::-ms-expand {
     width: 15rem;
     height: 15rem;
   }
-  .project--card {
-    width: 100%;
-    padding: 0.75rem;
-  }
   .project--container--card {
-    padding: 1rem;
+    padding: 1.5rem;
   }
   .project--section--description {
     font-size: 0.9rem;
@@ -1061,6 +1057,8 @@ select::-ms-expand {
   }
   .project--card--container {
     width: 80%;
+    align-items: center;
+    justify-content: center;
   }
   .project--card--title {
     font-size: 0.95rem;
