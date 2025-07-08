@@ -2,8 +2,6 @@ import { projects } from "../../data/data";
 import FadeIn from "./FadeIn";
 
 export default function MyProjects() {
-
-
   return (
     <section className="project--section" id="myProjects">
       <div className="project--container--card">
@@ -14,13 +12,13 @@ export default function MyProjects() {
         </FadeIn>
 
         <div className="project--section--container">
-          <FadeIn delay={0.2}>
-            <p className="project--section--description">
-              A curated collection of projects that showcase my skills in frontend
-              development. Each project highlights a specific area of
-              expertise from responsive UI design and component structuring to API
-              integration and performance optimization. Click on a card to explore
-              the live version or demo.
+          <FadeIn delay={0.2} className="project--section--description">
+            <p>
+              A curated collection of projects that showcase my skills in
+              frontend development. Each project highlights a specific area of
+              expertise from responsive UI design and component structuring to
+              API integration and performance optimization. Click on a card to
+              explore the live version or demo.
             </p>
           </FadeIn>
 

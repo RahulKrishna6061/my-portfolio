@@ -443,7 +443,8 @@ h3 {
   line-height: 1.2;
   align-self: left;
 }
-.project--section--description {
+.project--section--description,
+.contact--description {
   flex: 1;
   width: 50%;
   font-size: 24px;
@@ -689,7 +690,8 @@ select::-ms-expand {
     font-size: 2.8rem;
   }
 
-  .project--section--description {
+  .project--section--description,
+  .contact--description {
     font-size: 1.2rem;
   }
 
@@ -814,7 +816,7 @@ select::-ms-expand {
   .hero--section--title,
   .about-section--title,
   .skills--section--title,
-  .sections--heading {
+  .contact--title {
     font-size: 35px;
     line-height: 40px;
   }
@@ -829,7 +831,8 @@ select::-ms-expand {
   .skills--section--card--content {
     align-items: center;
   }
-  .project--section--description {
+  .project--section--description,
+  .contact--description {
     width: 100%;
   }
   .contact--form--container {
@@ -858,7 +861,8 @@ select::-ms-expand {
 
   .hero--section--title,
   .about-section--title,
-  .skills--section--title {
+  .skills--section--title,
+  .contact--title {
     font-size: 2.5rem;
   }
 
@@ -868,6 +872,15 @@ select::-ms-expand {
 
   .project--title--wrapper {
     align-items: center;
+  }
+
+  .project--container--card {
+    padding: 4rem;
+  }
+
+  .project--section--title {
+    display: flex;
+    justify-content: center;
   }
   .project--section--container {
     flex-direction: column;
@@ -884,7 +897,8 @@ select::-ms-expand {
     gap: 1.5rem;
   }
 
-  .project--section--description {
+  .project--section--description,
+  .contact--description {
     max-width: 100%;
     font-size: 1.1rem;
   }
@@ -893,7 +907,8 @@ select::-ms-expand {
 @media only screen and (max-width: 1024px) {
   .hero--section--title,
   .about-section--title,
-  .skills--section--title {
+  .skills--section--title,
+  .contact--title {
     font-size: 2rem;
   }
 
@@ -904,6 +919,11 @@ select::-ms-expand {
   .about--section-description {
     font-size: 17.333px;
   }
+
+  .project--container--card {
+    padding: 3rem;
+  }
+
   .project--cards--wrapper {
     flex-direction: row;
     align-items: center;
@@ -930,9 +950,14 @@ select::-ms-expand {
     font-size: 1.8rem;
   }
 
-  .project--section--description {
+  .project--section--description,
+  .contact--description {
     font-size: 1rem;
-    padding: 0 1rem;
+    padding: 0;
+  }
+
+  .project--container--card {
+    padding: 2rem;
   }
 
   .project--card {
@@ -946,7 +971,8 @@ select::-ms-expand {
 @media only screen and (max-width: 720px) {
   .hero--section--title,
   .about-section--title,
-  .skills--section--title {
+  .skills--section--title,
+  .contact--title {
     font-size: 1.8rem;
   }
 
@@ -957,7 +983,8 @@ select::-ms-expand {
     font-size: 1.6rem;
   }
 
-  .project--section--description {
+  .project--section--description,
+  .contact--description {
     font-size: 0.95rem;
   }
 
@@ -1007,7 +1034,7 @@ select::-ms-expand {
     padding: 0.75rem;
   }
   .project--container--card {
-    padding: 1rem !important ;
+    padding: 1rem;
   }
   .project--section--description {
     font-size: 0.9rem;
@@ -1118,8 +1145,6 @@ select::-ms-expand {
     transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
   }
 }
-
-
 
 .fade-in-section {
   opacity: 0;

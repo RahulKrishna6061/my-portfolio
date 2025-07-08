@@ -4,7 +4,7 @@ export default function ContactMe() {
       <div>
         <p className="sub--title">Get In Touch</p>
         <h1 className="contact--title">Contact Me</h1>
-        <p className="text-lg">
+        <p className="contact--description">
         Please fill out the form with your name, email, subject, and message. If you prefer, you can also contact me directly via email or phone.        </p>
       </div>
       <form className="contact--form--container">
