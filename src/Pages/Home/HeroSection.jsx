@@ -61,7 +61,7 @@ export default function HeroSection() {
       <FadeIn className="hero--section--img" delay={1}>
         <img
           className="profile--img"
-          src="./img/hero_img-2.png"
+          src="./img/new-crop.png"
           alt="Hero Section"
         />
       </FadeIn>
